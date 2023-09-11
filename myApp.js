@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-let bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 require('dotenv').config();
 app.use('/public', express.static(__dirname + '/public'));
 app.use("/", function(req, res, next) {
