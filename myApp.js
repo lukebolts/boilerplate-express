@@ -13,6 +13,7 @@ app.get("/json", function(req, res) {
     //     response = "Hello json"
     //     }
     res.json({"middlewareLogger" : method + " " + path + " - " + ip});
+    next();
     }
   );
 
