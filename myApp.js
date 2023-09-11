@@ -54,6 +54,12 @@ app.get("/",function(req, res) {
     }
   );
 
+app.post("/name",function(req,res){
+    let first = req.body.first;
+    let last = req.body.last;
+    console.log(first + last)
+    res.json({"name": first + " " + last})
+}
 
 
 
