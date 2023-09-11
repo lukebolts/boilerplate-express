@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 let response = "";
-if (process.env.MESSAGE_STYLE === uppercase){
+if (process.env.MESSAGE_STYLE === "uppercase"){
     response = "Hello json".toupperCase();
     }
     else {
