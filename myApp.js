@@ -21,14 +21,14 @@ app.get("/json", function(req, res) {
         }
     res.json({"message": response});
     }
-  );
+  )
 
 app.get("/now", function(req, res, next){
     req.time = new Date().toString();
-    console.log(req.time)
+    console.log(req.time);
     next();
-    }
     res.json({"time": req.time})
+    }
   )
 
 
