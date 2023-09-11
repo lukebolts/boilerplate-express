@@ -60,7 +60,7 @@ app.post("/name",function(req,res){
     console.log(first + last)
     res.json({"name": first + " " + last})
 }
-
+)
 
 
 
