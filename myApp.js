@@ -3,6 +3,11 @@ let app = express();
 var bodyParser = require("body-parser");
 require('dotenv').config();
 app.use('/public', express.static(__dirname + '/public'));
+
+app.use(bodyParser.urlencoded({extended: false}))
+
+app.use(bodyParser.json())
+
 app.use("/", function(req, res, next) {
     let method = req.method;
     let path = req.path;
@@ -11,7 +16,7 @@ app.use("/", function(req, res, next) {
     next();
     }
 )
-app.use(bodyParser.urlencoded({extended: false}))
+
 app.get("/json", function(req, res) {
     let method = req.method;
 
